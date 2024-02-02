@@ -1,0 +1,53 @@
+{
+  "usr": [
+    {
+      "first_name": "ab",
+      "last_name": "c",
+      "email": "abc@gmail.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "first_name": "chaitanya",
+      "last_name": "vellanki",
+      "email": "chai@gmail.com",
+      "password": "chai@123",
+      "id": 2
+    },
+    {
+      "first_name": "cherry",
+      "last_name": "vellanki",
+      "email": "cherry@gmail.com",
+      "password": "cherry@123",
+      "id": 3
+    },
+    {
+      "first_name": "venky",
+      "last_name": "chai",
+      "email": "venky@gmail.com",
+      "password": "venky@123",
+      "id": 4
+    },
+    {
+      "first_name": "nikhil",
+      "last_name": "paduchu",
+      "email": "nikhil@gmail.com",
+      "password": "nikhil@123",
+      "id": 5
+    },
+    {
+      "first_name": "nikhil",
+      "last_name": "paduchu",
+      "email": "nikhil@gmail.com",
+      "password": "nikhil@123",
+      "id": 6
+    },
+    {
+      "first_name": "chai",
+      "last_name": "vell",
+      "email": "chai@gmail.com",
+      "password": "123456",
+      "id": 7
+    }
+  ]
+}
