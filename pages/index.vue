@@ -115,19 +115,20 @@
         </div>
     </body>
 </template>
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 import Todo from '~/components/Todo.vue';
 
-export default {
+export default defineComponent({
     components: {
         Todo
     },
     data() {
         return {
             newTodoText: '',
-            todos: [],
+            todos: [] as { id: number; text: string; done: boolean }[],
             nextId: 1,
-            first_name:''
+            first_name: ''
         };
     },
     methods: {
@@ -137,10 +138,10 @@ export default {
                 this.newTodoText = '';
             }
         },
-        deleteTodo(todo) {
+        deleteTodo(todo: { id: number; text: string; done: boolean }) {
             this.todos = this.todos.filter(t => t.id !== todo.id);
         },
-        toggleTodo(todo) {
+        toggleTodo(todo: { id: number; text: string; done: boolean }) {
             const found = this.todos.find(t => t.id === todo.id);
             if (found) {
                 found.done = !found.done;
@@ -148,14 +149,15 @@ export default {
         }
     },
     mounted() {
-        let usr = localStorage.getItem('usr-info');
-        this.first_name = JSON.parse(usr).first_name;
-        if (!usr) {
-            this.$router.push({ name: 'signup' })
+        const usr = localStorage.getItem('usr-info');
+        if (usr) {
+            this.first_name = JSON.parse(usr).first_name;
+        } else {
+            this.$router.push({ name: 'signup' });
         }
-        console.warn(this.$route.params.id)
+        console.warn(this.$route.params.id);
     }
-}
+});
 </script>
 <style>
 body {

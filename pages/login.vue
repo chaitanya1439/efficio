@@ -16,7 +16,7 @@
     <NuxtLink to="/signup" style="margin-left: 150px;">SIGN UP</NuxtLink>
     </p>
 </template>
-<script>
+<script lang="ts">
 import axios from 'axios';
 export default{
     name:'login',
@@ -37,7 +37,7 @@ export default{
             if(result.status == 200 && result.data.length>0) 
             {
                 localStorage.setItem("usr-info", JSON.stringify(result.data[0]))
-                this.$router.push({name:'home'})
+                this.$router.push({name:'index'})
             }
             console.warn(result)
         }
@@ -47,7 +47,7 @@ export default{
         let usr= localStorage.getItem('usr-info');
         if(usr)
         {
-            this.$router.push({name:'home'})
+            this.$router.push({name:'index'})
         }
     }
     

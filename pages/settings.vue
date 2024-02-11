@@ -22,7 +22,7 @@
                     <nav>
                         <ul>
                             <li>
-                                <a href="/home">
+                                <a href="/">
                                     <span class="material-symbols-outlined">
                                         home
                                     </span>
@@ -149,9 +149,13 @@
             </div>
         </div>
 </template>
-<script>
+<script lang="ts">
 export default {
-    name: 'settings',
+    data() {
+        return {
+            first_name:''
+        };
+    },
     methods: {
         logout() {
             localStorage.clear();
@@ -159,14 +163,14 @@ export default {
         }
     },
     mounted() {
-        let usr = localStorage.getItem('usr-info');
-        this.first_name = JSON.parse(usr).first_name;
-        if (!usr) {
-            this.$router.push({ name: 'signup' })
+        const usr = localStorage.getItem('usr-info');
+        if (usr) {
+            this.first_name = JSON.parse(usr).first_name;
+        } else {
+            this.$router.push({ name: 'signup' });
         }
-        console.warn(this.$route.params.id)
-
-    },
+        console.warn(this.$route.params.id);
+    }
 }
 </script>
 <style>

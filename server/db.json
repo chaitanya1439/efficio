@@ -48,6 +48,20 @@
       "email": "chai@gmail.com",
       "password": "123456",
       "id": 7
+    },
+    {
+      "first_name": "chai",
+      "last_name": "vell",
+      "email": "chaita@gmail.com",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "first_name": "chai",
+      "last_name": "vell",
+      "email": "chait@gmail.com",
+      "password": "123456",
+      "id": 9
     }
   ]
 }

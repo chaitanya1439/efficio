@@ -46,7 +46,7 @@ export default {
             if(result.status == 201) 
             {
                 localStorage.setItem("usr-info", JSON.stringify(result.data))
-                this.$router.push({name:'home'})
+                this.$router.push({name:'index'})
             }
         }
     },
@@ -55,7 +55,7 @@ export default {
         let usr= localStorage.getItem('usr-info');
         if(usr)
         {
-            this.$router.push({name:'home'})
+            this.$router.push({name:'index'})
         }
     }
 }

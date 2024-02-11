@@ -22,7 +22,7 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="/home">
+                            <a href="/">
                                 <span class="material-symbols-outlined">
                                     home
                                 </span>
