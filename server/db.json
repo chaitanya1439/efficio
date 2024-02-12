@@ -62,6 +62,41 @@
       "email": "chait@gmail.com",
       "password": "123456",
       "id": 9
+    },
+    {
+      "first_name": "chai",
+      "last_name": "bdj",
+      "email": "chai@gmail.com",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "first_name": "chai",
+      "last_name": "vella",
+      "email": "hdbjs@gmail.com",
+      "password": "123456",
+      "id": 11
+    },
+    {
+      "first_name": "chai",
+      "last_name": "nhgj",
+      "email": "fggfh@gmail.com",
+      "password": "123456",
+      "id": 12
+    },
+    {
+      "first_name": "vellanki",
+      "last_name": "fsjxv",
+      "email": "mghg@gmail.com",
+      "password": "123456",
+      "id": 13
+    },
+    {
+      "first_name": "sxas",
+      "last_name": "dsfesfa",
+      "email": "faf@fs.com",
+      "password": "123456",
+      "id": 14
     }
   ]
 }

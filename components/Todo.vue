@@ -1,7 +1,7 @@
 <template>
   <div class="todo">
-    <input type="checkbox" :checked="todo.done" @change="toggleTodo">
-    <span :class="{ done: todo.done }">{{ todo.text }}</span>
+    <input type="checkbox" :checked="todo.done" @change="toggleTodo" style="margin-left: 210px;margin-top: 10px;">
+    <span :class="{ done: todo.done }" style="margin-right: 40px;">{{ todo.text }}</span>
     <button @click="deleteTodo">Delete</button>
   </div>
 </template>

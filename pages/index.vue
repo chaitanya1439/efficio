@@ -150,7 +150,7 @@ export default defineComponent({
     },
     mounted() {
         const usr = localStorage.getItem('usr-info');
-        if (usr) {
+        if (usr!) {
             this.first_name = JSON.parse(usr).first_name;
         } else {
             this.$router.push({ name: 'signup' });
