@@ -115,10 +115,11 @@
                 <!-- user end -->
             </div>
             <main>
-                <div v-for="todo in todos" :key="todo.id">
-                            <Todo :todo="todo" @delete-todo="deleteTodo" @toggle-todo="toggleTodo" />
-                        </div>
-            </main>
+    <div v-for="todo in todos" :key="todo.id">
+        <Todo :todo="{ done: todo.done, text: 'Default text or actual text' }" @delete-todo="deleteTodo" @toggle-todo="toggleTodo" />
+    </div>
+</main>
+
         </div>
     </div>
 </template>
@@ -130,14 +131,15 @@ import Todo from '~/components/Todo.vue'; // Ensure Todo.vue is also using TypeS
 interface TodoItem {
     id: number;
     done: boolean;
-    // Add other properties as needed
+    text: string; // Add this property
 }
+
 
 export default defineComponent({
     components: {
         Todo,
         props: {
-  todo: {
+            todo: {
     type: Object,
     required: true,
     default: () => ({}),
@@ -190,6 +192,13 @@ export default defineComponent({
 });
 </script>
 <style>
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background: linear-gradient(#f4dbfb, #d8dbfe);
+}
 .container {
     position: relative;
     width: 95%;

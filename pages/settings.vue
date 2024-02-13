@@ -174,6 +174,13 @@ export default {
 }
 </script>
 <style>
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background: linear-gradient(#f4dbfb, #d8dbfe);
+}
 .hai {
     text-decoration: none;
     align-items: center;

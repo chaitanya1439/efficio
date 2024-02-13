@@ -1,5 +1,5 @@
 import express from 'express';
-import bodyParser from 'body-parser';
+import bodyParser, { text } from 'body-parser';
 
 // Initialize Express
 const app = express();
@@ -9,13 +9,16 @@ const port = 3001;
 app.use(bodyParser.json());
 
 // Define your API endpoint
-app.post('/server/db.json', (req, res) => {
+app.post('~/server/db.json', (req, res) => {
     // Handle POST request here
-    console.log('Received POST request:', req.body);
-    res.status(200).json({ message: 'User created successfully' });
+    console.log('usr:', req.body);
+    res.status(200).json({ first_name: '',
+        last_name: '',
+        email: '',
+        password: '' });
 });
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server is listening at http://localhost:${port}`);
+    console.log(`http://localhost:${port}/usr`);
 });
